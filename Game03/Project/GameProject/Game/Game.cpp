@@ -8,9 +8,8 @@
 
 Game::Game() :Base(eType_Scene)
 {
-	//Base::Add(new Field());
 	Base::Add(new Map());
-	Base::Add(new Player(CVector2D(MAP_HEIGHT*6, MAP_WIDTH*3), false));
+	Base::Add(new Player(CVector2D(MAP_WIDTH * 3, MAP_HEIGHT * 6), false));
 	Base::Add(new Enemy(CVector2D(1280 + 256 * 1, 540), true));
 	Base::Add(new Enemy(CVector2D(1280 + 256 * 2, 540), true));
 	Base::Add(new Enemy(CVector2D(1280 + 256 * 3, 540), true));

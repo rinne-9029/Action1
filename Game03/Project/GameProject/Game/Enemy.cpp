@@ -85,10 +85,10 @@ void Enemy::StateAttack() {
 	//3番目のパターンなら
 	if (m_img.GetIndex() == 3) {
 		if (m_flip) {
-			Base::Add(new Slash(m_pos + CVector2D(-64, -64), m_flip, eType_Enemy_Attack, m_attack_no));
+			//Base::Add(new Slash(m_pos + CVector2D(-64, -64), m_flip, eType_Enemy_Attack, m_attack_no));
 		}
 		else {
-			Base::Add(new Slash(m_pos + CVector2D(64, -64), m_flip, eType_Enemy_Attack, m_attack_no));
+			//Base::Add(new Slash(m_pos + CVector2D(64, -64), m_flip, eType_Enemy_Attack, m_attack_no));
 		}
 	}
 	//アニメーションが終了したら
@@ -114,7 +114,7 @@ void Enemy::StateDown()
 	//ダウンアニメーションへ変更
 	m_img.ChangeAnimation(eAnimDown, false);
 	if (m_img.CheckAnimationEnd()) {
-		Base::Add(new Effect("Effect_Smoke", m_pos + CVector2D(0, 0), m_flip));
+		//Base::Add(new Effect("Effect_Smoke", m_pos + CVector2D(0, 0), m_flip));
 		m_kill = true;
 	}
 }
@@ -187,7 +187,7 @@ void Enemy::Collision(Base* b)
 				else {
 					m_state = eState_Damage;
 				}
-				Base::Add(new Effect("Effect_Blood", m_pos + CVector2D(0, -128), m_flip));
+				//Base::Add(new Effect("Effect_Blood", m_pos + CVector2D(0, -128), m_flip));
 			}
 		}
 		break;

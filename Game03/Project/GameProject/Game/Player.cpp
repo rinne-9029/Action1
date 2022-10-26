@@ -5,6 +5,8 @@
 #include"Effect.h"
 #include"Map.h"
 
+
+
 Player::Player(const CVector2D& p, bool flip):
 	Base(eType_Player) {
 		//画像複製
@@ -15,10 +17,10 @@ Player::Player(const CVector2D& p, bool flip):
 		m_pos_old = m_pos = p ;
 		//中心位置設定
 		m_img.SetCenter(16,32);
-		//反転フラグ
-		m_flip = flip;
 		//矩形判定の設定
 		m_rect = CRect(-16, -32, 16, 0);
+		//反転フラグ
+		m_flip = flip;
 		//通常状態へ
 		m_state = eState_Idle;
 		//着地フラグ
@@ -28,6 +30,8 @@ Player::Player(const CVector2D& p, bool flip):
 		//ヒットポイント
 		m_hp = 100;
 }
+
+
 
 void Player::StateIdle()
 {
@@ -40,7 +44,7 @@ void Player::StateIdle()
 
 
 	//左移動
-	if (HOLD(CInput::eLeft)) {
+	if (HOLD(CInput::eButton2)) {
 		//移動量を設定
 		m_pos.x += -move_speed;
 		//反転フラグ
@@ -49,7 +53,7 @@ void Player::StateIdle()
 	}
 
 	//右移動
-	if (HOLD(CInput::eRight)) {
+	if (HOLD(CInput::eButton4)) {
 		//移動量を設定
 		m_pos.x += move_speed;
 		//反転フラグ
@@ -58,7 +62,7 @@ void Player::StateIdle()
 	}
 
 	//ジャンプ
-	if (m_is_ground && PUSH(CInput::eButton2)) {
+	if (m_is_ground && PUSH(CInput::eButton5)) {
 		m_vec.y = -jump_pow;
 		m_is_ground = false;
 	}
@@ -169,7 +173,7 @@ void Player::Collision(Base* b)
 				else {
 					m_state = eState_Damage;
 				}
-				Base::Add(new Effect("Effect_Blood", m_pos + CVector2D(0, -128), m_flip));
+				//Base::Add(new Effect("Effect_Blood", m_pos + CVector2D(0, -128), m_flip));
 			}
 		}
 		break;
