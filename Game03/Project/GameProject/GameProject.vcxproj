@@ -14,6 +14,7 @@
     <ClCompile Include="Base\Base.cpp" />
     <ClCompile Include="Game\AnimData.cpp" />
     <ClCompile Include="Game\Enemy.cpp" />
+    <ClCompile Include="Game\Fallingfloor.cpp" />
     <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="Game\Goal.cpp" />
     <ClCompile Include="Game\Map.cpp" />
@@ -25,6 +26,7 @@
     <ClInclude Include="Base\Base.h" />
     <ClInclude Include="Game\AnimData.h" />
     <ClInclude Include="Game\Enemy.h" />
+    <ClInclude Include="Game\Fallingfloor.h" />
     <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Game\Goal.h" />
     <ClInclude Include="Game\Map.h" />

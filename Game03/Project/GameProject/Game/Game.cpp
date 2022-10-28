@@ -4,16 +4,22 @@
 #include"Enemy.h"
 #include"Goal.h"
 #include"Map.h"
+#include"Fallingfloor.h"
 #include"../Title/Title.h"
 
 Game::Game() :Base(eType_Scene)
 {
 	Base::Add(new Map());
+	//プレイヤー配置
 	Base::Add(new Player(CVector2D(MAP_HEIGHT * 6, MAP_WIDTH * 6), false));
+	//敵配置
 	Base::Add(new Enemy(CVector2D(1280 + 256 * 1, 540), true));
 	Base::Add(new Enemy(CVector2D(1280 + 256 * 2, 540), true));
 	Base::Add(new Enemy(CVector2D(1280 + 256 * 3, 540), true));
+	//ゴール配置
 	Base::Add(new Goal(CVector2D(MAP_HEIGHT * 30, MAP_WIDTH * 6)));
+	//落ちる床配置
+	Base::Add(new Fallingfloor(CVector2D(MAP_HEIGHT * 6, MAP_WIDTH * 30)));
 }
 Game::~Game()
 {
