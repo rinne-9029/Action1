@@ -37,6 +37,23 @@ static TexAnim playerJumpUp[] = {
 static TexAnim playerJumpDown[] = {
 	{ 25,1 },
 };
+
+static TexAnim playerDoubleJump[] = {
+	{ 26,1 },
+	{ 27,1 },
+	{ 28,1 },
+	{ 29,1 },
+	{ 30,1 },
+	{ 31,1 },
+};
+
+static TexAnim playerWallJump[] = {
+	{ 36,1 },
+	{ 37,1 },
+	{ 38,1 },
+	{ 39,1 },
+	{ 40,1 },
+};
 //ここまでアニメーション完成
 
 static TexAnim playerDamage[] = {
@@ -105,45 +122,15 @@ static TexAnim playerCrash01End[] = {
 	{ 129,4 },
 	{ 128,4 },
 };
-static TexAnim playerExtAttack01[] = {
-	{ 144,4 },
-	{ 145,4 },
-	{ 146,12 },
-	{ 147,2 },
-	{ 148,2 },
-	{ 149,2 },
-	{ 150,16 },
-};
-static TexAnim playerExtAttack01End[] = {
-	{ 151,4 },
-	{ 152,4 },
-};
-static TexAnim playerExtAttack02[] = {
-	{ 160,2 },
-	{ 161,2 },
-	{ 162,2 },
-	{ 163,2 },
-	{ 164,2 },
-	{ 165,2 },
-	{ 166,2 },
-	{ 167,2 },
-	{ 168,2 },
-};
-static TexAnim playerExtAttack02End[] = {
-	{ 169,16 },
-	{ 170,4 },
-	{ 171,4 },
-};
-static TexAnim playerStep[] = {
-	{ 120,4 },
-	{ 121,4 },
-	{ 122,4 },
+
 };
 TexAnimData player_anim_data[] = {
 	ANIMDATA(playerIdle),
 	ANIMDATA(playerRun),
 	ANIMDATA(playerJumpUp),
 	ANIMDATA(playerJumpDown),
+	ANIMDATA(playerDoubleJump),
+	ANIMDATA(playerWallJump),
 	ANIMDATA(playerDamage),
 	ANIMDATA(playerDamageEnd),
 	ANIMDATA(playerDeath),
@@ -154,11 +141,6 @@ TexAnimData player_anim_data[] = {
 	ANIMDATA(playerGuardEnd),
 	ANIMDATA(playerCrash),
 	ANIMDATA(playerCrash01End),
-	ANIMDATA(playerExtAttack01),
-	ANIMDATA(playerExtAttack01End),
-	ANIMDATA(playerExtAttack02),
-	ANIMDATA(playerExtAttack02End),
-	ANIMDATA(playerStep),
 };
 
 static TexAnim enemyIdle[] = {

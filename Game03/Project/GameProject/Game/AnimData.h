@@ -7,6 +7,8 @@ enum  {
 	eAnimRun,
 	eAnimJumpUp,
 	eAnimJumpDown,
+	eAnimDoubleJump,
+	eAnimWallJump,
 	eAnimAttack01,
 	eAnimAttack01End,
 	eAnimAttack02,
