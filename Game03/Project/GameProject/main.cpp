@@ -1,7 +1,7 @@
 //ゲーム係機能のインクルード
 #include <GLLibrary.h>
-#define SCREEN_WIDTH 1920
-#define SCREEN_HEIGHT 1080
+#define SCREEN_WIDTH 1280
+#define SCREEN_HEIGHT 720
 
 #include "Game/AnimData.h"
 #include "Title/Title.h"

@@ -123,7 +123,6 @@ static TexAnim playerCrash01End[] = {
 	{ 128,4 },
 };
 
-};
 TexAnimData player_anim_data[] = {
 	ANIMDATA(playerIdle),
 	ANIMDATA(playerRun),

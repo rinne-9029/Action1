@@ -6,6 +6,7 @@ private:
 	//状態
 	enum {
 		eState_Idle,
+		eState_DoubleJump,
 		eState_Damage,
 		eState_Down
 	};
@@ -19,10 +20,13 @@ private:
 	int m_damage_no;
 	//ヒットポイント
 	int m_hp;
+	//ジャンプ回数
+	int jumpcount;
 	CImage m_img;
 
 	//各状態での挙動
 	void StateIdle();
+	void StateDoubleJump();
 	void StateDamage();
 	void StateDown();
 

@@ -29,6 +29,8 @@ Player::Player(const CVector2D& p, bool flip):
 		m_damage_no = -1;
 		//ヒットポイント
 		m_hp = 100;
+		//ジャンプ回数
+        jumpcount = 0;
 }
 
 
@@ -38,9 +40,10 @@ void Player::StateIdle()
 	//移動量
 	const float move_speed = 6;
 	//ジャンプ力
-	const float jump_pow = 12;
+    const float jump_pow = 12;
 	//移動フラグ
 	bool move_flag = false;
+
 
 
 	//左移動
@@ -61,6 +64,13 @@ void Player::StateIdle()
 		move_flag = true;
 	}
 
+	//２段ジャンプ
+     if (!m_is_ground && PUSH(CInput::eButton5) && jumpcount == 0) {
+			m_state = eState_DoubleJump;
+		}
+
+
+
 	//ジャンプ
 	if (m_is_ground && PUSH(CInput::eButton5)) {
 		m_vec.y = -jump_pow;
@@ -76,6 +86,12 @@ void Player::StateIdle()
 		else
 			//下降アニメーション
 			m_img.ChangeAnimation(eAnimJumpDown, false);
+
+	
+	}
+	//地面についたら
+	if (m_is_ground) {
+		jumpcount = 0;
 	}
 
 	//移動中なら
@@ -89,6 +105,21 @@ void Player::StateIdle()
 			//待機アニメーション
 			m_img.ChangeAnimation(eAnimIdle);
 		}
+		
+	}
+}
+
+//2段ジャンプ中
+void Player::StateDoubleJump()
+{   //ジャンプ力
+	const float jump_pow = 6;
+	//アニメーション切り替え
+	m_img.ChangeAnimation(eAnimDoubleJump,false);
+	m_vec.y = -jump_pow;
+	jumpcount += 1;
+	//アニメーション終了後
+ 	if (m_img.CheckAnimationEnd()) {
+		m_state = eState_Idle;
 	}
 }
 
@@ -118,6 +149,10 @@ void Player::Update()
 		//通常状態
 	case eState_Idle:
 		StateIdle();
+		break;
+		//2段ジャンプ状態
+	case eState_DoubleJump:
+		StateDoubleJump();
 		break;
 		//ダメージ状態
 	case eState_Damage:
