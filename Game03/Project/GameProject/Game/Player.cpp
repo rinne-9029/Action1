@@ -16,9 +16,9 @@ Player::Player(const CVector2D& p, bool flip):
 		//座標設定
 		m_pos_old = m_pos = p ;
 		//中心位置設定
-		m_img.SetCenter(32,32);
+		m_img.SetCenter(28,32);
 		//矩形判定の設定
-		m_rect = CRect(-32, -32, 0,0);
+		m_rect = CRect(-23, -30, 0,0);
 		//反転フラグ
 		m_flip = flip;
 		//通常状態へ
@@ -65,6 +65,7 @@ void Player::StateIdle()
 	}
 
 	//２段ジャンプ
+	//ジャンプの前に入れることによって１回目から２段ジャンプになるのを防ぐ
      if (!m_is_ground && PUSH(CInput::eButton5) && jumpcount == 0) {
 			m_state = eState_DoubleJump;
 		}
@@ -76,7 +77,11 @@ void Player::StateIdle()
 		m_vec.y = -jump_pow;
 		m_is_ground = false;
 	}
-
+	
+	//地面についたら
+	if (m_is_ground) {
+		jumpcount = 0;
+	}
 
 	//ジャンプ中なら
 	if (!m_is_ground) {
@@ -89,11 +94,6 @@ void Player::StateIdle()
 
 	
 	}
-	//地面についたら
-	if (m_is_ground) {
-		jumpcount = 0;
-	}
-
 	//移動中なら
 	else
 	{

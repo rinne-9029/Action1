@@ -9,11 +9,11 @@
 Game::Game() :Base(eType_Scene)
 {
 	Base::Add(new Map());
-	Base::Add(new Player(CVector2D(MAP_WIDTH * 3, MAP_HEIGHT * 6), false));
+	Base::Add(new Player(CVector2D(MAP_HEIGHT * 3, MAP_WIDTH * 6), false));
 	Base::Add(new Enemy(CVector2D(1280 + 256 * 1, 540), true));
 	Base::Add(new Enemy(CVector2D(1280 + 256 * 2, 540), true));
 	Base::Add(new Enemy(CVector2D(1280 + 256 * 3, 540), true));
-	Base::Add(new Goal(CVector2D(2048,540)));
+	Base::Add(new Goal(CVector2D(MAP_HEIGHT * 30, MAP_WIDTH * 6)));
 }
 Game::~Game()
 {
