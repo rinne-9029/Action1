@@ -6,13 +6,13 @@ Goal::Goal(const CVector2D& pos)
 	//âÊëúï°êª
 	m_img = COPY_RESOURCE("Goal", CImage);
 	m_pos = pos;
-	m_img.SetSize(64,112);
-	m_img.SetCenter(64, 112);
-	m_rect = CRect(-32, -128, 32, 0);
+	m_img.SetCenter(32, 64);
+	m_rect = CRect(-22, -45, 22, 0);
 }
 
 void Goal::Draw()
 {
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
+	//DrawRect();
 }
