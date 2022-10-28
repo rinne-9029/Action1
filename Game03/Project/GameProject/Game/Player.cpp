@@ -16,9 +16,9 @@ Player::Player(const CVector2D& p, bool flip):
 		//座標設定
 		m_pos_old = m_pos = p ;
 		//中心位置設定
-		m_img.SetCenter(16,32);
+		m_img.SetCenter(32,32);
 		//矩形判定の設定
-		m_rect = CRect(-16, -32, 16, 0);
+		m_rect = CRect(-32, -32, 0,0);
 		//反転フラグ
 		m_flip = flip;
 		//通常状態へ
@@ -92,7 +92,7 @@ void Player::StateIdle()
 	}
 }
 
-
+//ダメージ状態
 void Player::StateDamage()
 {
 	m_img.ChangeAnimation(eAnimDamage, false);
@@ -101,6 +101,7 @@ void Player::StateDamage()
 	}
 }
 
+//ダウン状態
 void Player::StateDown()
 {
 	m_img.ChangeAnimation(eAnimDown, false);
@@ -108,6 +109,7 @@ void Player::StateDown()
 		m_kill = true;
 	}
 }
+
 
 void Player::Update()
 {
@@ -139,8 +141,10 @@ void Player::Update()
 	m_scroll.y = m_pos.y - 600;
 }
 
+
 void Player::Draw()
-{//位置設定
+{
+	//位置設定
 	m_img.SetPos(GetScreenPos(m_pos));
 	//反転設定
 	m_img.SetFlipH(m_flip);

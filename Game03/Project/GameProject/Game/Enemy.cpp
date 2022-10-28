@@ -167,7 +167,7 @@ void Enemy::Draw()
 	//•`‰æ
 	m_img.Draw();
 	//“–‚½‚è”»’è‹éŒ`
-	//DrawRect();
+	DrawRect();
 }
 
 void Enemy::Collision(Base* b)
