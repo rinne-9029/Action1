@@ -212,7 +212,6 @@ void Player::Collision(Base* b)
 				else {
 					m_state = eState_Damage;
 				}
-				//Base::Add(new Effect("Effect_Blood", m_pos + CVector2D(0, -128), m_flip));
 			}
 		}
 		break;
