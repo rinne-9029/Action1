@@ -5,6 +5,7 @@
 #include"Goal.h"
 #include"Map.h"
 #include"Fallingfloor.h"
+#include"FireTrap.h"
 #include"../Title/Title.h"
 
 Game::Game() :Base(eType_Scene)
@@ -20,6 +21,12 @@ Game::Game() :Base(eType_Scene)
 	Base::Add(new Goal(CVector2D(MAP_HEIGHT * 30, MAP_WIDTH * 6)));
 	//落ちる床配置
 	Base::Add(new Fallingfloor(CVector2D(MAP_HEIGHT * 20, MAP_WIDTH * 6)));
+	//火柱の配置
+	Base::Add(new FireTrap(CVector2D(MAP_HEIGHT * 20, MAP_WIDTH * 6)));
+
+
+
+
 }
 Game::~Game()
 {
