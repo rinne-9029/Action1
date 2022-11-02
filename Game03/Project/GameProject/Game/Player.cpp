@@ -3,6 +3,7 @@
 #include "Field.h"
 #include "Slash.h"
 #include"Effect.h"
+#include"FireTrap.h"
 #include"Map.h"
 
 
@@ -25,12 +26,13 @@ Player::Player(const CVector2D& p, bool flip):
 		m_state = eState_Idle;
 		//着地フラグ
 		m_is_ground = true;
-		//ダメージ番号
-		m_damage_no = -1;
 		//ヒットポイント
 		m_hp = 100;
 		//ジャンプ回数
         jumpcount = 0;
+		//無敵時間
+		invincibility = 0;
+
 }
 
 
@@ -44,6 +46,7 @@ void Player::StateIdle()
 	//移動フラグ
 	bool move_flag = false;
 
+	invincibility -= 1;
 
 
 	//左移動
@@ -137,7 +140,7 @@ void Player::StateDown()
 {
 	m_img.ChangeAnimation(eAnimDown, false);
 	if (m_img.CheckAnimationEnd()) {
-		m_kill = true;
+		SetKill();
 	}
 }
 
@@ -166,9 +169,11 @@ void Player::Update()
 	//落ちていたら落下中状態へ移行
 	if (m_is_ground && m_vec.y > GRAVITY * 4)
 		m_is_ground = false;
+
 	//重力による落下
 	m_vec.y += GRAVITY;
 	m_pos += m_vec;
+
 		//アニメーション更新
 	m_img.UpdateAnimation();
 	//スクロール設定
@@ -198,21 +203,18 @@ void Player::Collision(Base* b)
 				b->SetKill();
 			}
 			break;
-//攻撃オブジェクトとの判定
-	case eType_Enemy_Attack:
-		//Slash型へキャスト、型変換できたら
-		if (Slash* s = dynamic_cast<Slash*>(b)) {
-			if (m_damage_no != s->GetAttackNo() && Base::CollisionRect(this, s)) {
-				//同じ攻撃の連続ダメージ防止
-				m_damage_no = s->GetAttackNo();
-				m_hp -= 50;
-				if (m_hp <= 0) {
-					m_state = eState_Down;
-				}
-				else {
-					m_state = eState_Damage;
-				}
-			}
+//火柱の当たり判定
+	case eType_FireTrap:
+			if (Base::CollisionRect(this,b) && invincibility<=0) {
+				//無敵時間3秒
+				invincibility = 180;
+					m_hp -= 50;
+					printf("当たった");
+					if (m_hp <= 0) {
+						m_state = eState_Down;
+					}else {
+						m_state = eState_Damage;
+					}
 		}
 		break;
 	case eType_Field:

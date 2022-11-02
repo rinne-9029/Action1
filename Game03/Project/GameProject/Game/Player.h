@@ -16,12 +16,12 @@ private:
 	bool m_flip;
 	//着地フラグ
 	bool m_is_ground;
-    //ダメージ番号
-	int m_damage_no;
 	//ヒットポイント
 	int m_hp;
 	//ジャンプ回数
 	int jumpcount;
+	//無敵時間
+	int invincibility;
 	CImage m_img;
 
 	//各状態での挙動

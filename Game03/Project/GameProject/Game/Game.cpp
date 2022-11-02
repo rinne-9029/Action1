@@ -22,7 +22,7 @@ Game::Game() :Base(eType_Scene)
 	//落ちる床配置
 	Base::Add(new Fallingfloor(CVector2D(MAP_HEIGHT * 20, MAP_WIDTH * 6)));
 	//火柱の配置
-	Base::Add(new FireTrap(CVector2D(MAP_HEIGHT * 20, MAP_WIDTH * 6)));
+	Base::Add(new FireTrap(CVector2D(MAP_HEIGHT * 20, MAP_WIDTH * 20),false));
 
 
 
