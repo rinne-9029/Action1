@@ -28,7 +28,7 @@ void Fallingfloor::StateOff()
 
 
 Fallingfloor::Fallingfloor(const CVector2D& pos)
-	:Base(eType_Trap)
+	:Base(eType_Fallingfloor)
 {
 	m_img.Load("Image/Fallingfloor/On.png", fallingfloorAnimData, 32, 10);
 	//ç¿ïWê›íË
