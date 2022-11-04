@@ -67,6 +67,7 @@ void Init(void)
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 	ADD_RESOURCE("MapTip", CImage::CreateImage("Image/MapTip.png"));
 	ADD_RESOURCE("Goal", CImage::CreateImage("Image/Goal.png"));
+	ADD_RESOURCE("Start", CImage::CreateImage("Image/Start.png"));
 	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player1.png", player_anim_data, 32, 32));
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy.png", enemy_anim_data, 256, 256));
 

@@ -4,9 +4,10 @@
 #define GRAVITY (9.8f/20)
 enum {
 	eType_Field,
+	eType_Goal,
+	eType_Start,
     eType_Player,
 	eType_Enemy,
-    eType_Goal,
 	eType_Fallingfloor,
 	eType_FireTrap,
 	eType_Player_Attack,
