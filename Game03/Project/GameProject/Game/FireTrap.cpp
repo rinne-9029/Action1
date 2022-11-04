@@ -32,7 +32,7 @@ FireTrap::FireTrap(const CVector2D& pos,int attack_no):
 	m_img.ChangeAnimation(0);
 	m_img.SetCenter(16, 64);
 	//m_img.SetSize(64, 128);
-	m_rect = CRect(-16, -64, 16, 0);
+	m_rect = CRect(-5, -64, 5, 0);
 	m_pos = pos;
 	//UŒ‚”Ô†
 	m_attack_no = attack_no;
@@ -53,9 +53,4 @@ void FireTrap::Draw()
 
 void FireTrap::Collision(Base* b)
 {
-	switch (b->m_type) {
-	case eType_Player:
-		
-		break;
-	}
 }

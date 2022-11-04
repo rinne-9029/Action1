@@ -46,6 +46,7 @@ void Player::StateIdle()
 	//ˆÚ“®ƒtƒ‰ƒO
 	bool move_flag = false;
 
+	//–³“GŽžŠÔ
 	invincibility -= 1;
 
 
