@@ -113,7 +113,7 @@ void Player::StateIdle()
 	}
 }
 
-//2段ジャンプ中
+//2段ジャンプ状態
 void Player::StateDoubleJump()
 {   //ジャンプ力
 	const float jump_pow = 6;
@@ -179,7 +179,7 @@ void Player::Update()
 	m_img.UpdateAnimation();
 	//スクロール設定
 	m_scroll.x = m_pos.x - 1280 / 2;
-	m_scroll.y = m_pos.y - 600;
+	m_scroll.y = m_pos.y - 980;
 }
 
 

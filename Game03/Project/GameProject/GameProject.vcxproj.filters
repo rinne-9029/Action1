@@ -20,9 +20,6 @@
     <ClCompile Include="Game\Goal.cpp">
       <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="Game\Map.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="Game\Enemy.cpp">
       <Filter>Game</Filter>
     </ClCompile>
@@ -33,6 +30,15 @@
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="Game\Start.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Field.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Map.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Signboard.cpp">
       <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
@@ -66,9 +72,6 @@
     <ClInclude Include="Game\Goal.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Game\Map.h">
-      <Filter>Game</Filter>
-    </ClInclude>
     <ClInclude Include="Game\Enemy.h">
       <Filter>Game</Filter>
     </ClInclude>
@@ -79,6 +82,15 @@
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="Game\Start.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Field.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Map.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Signboard.h">
       <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>

@@ -15,11 +15,13 @@
     <ClCompile Include="Game\AnimData.cpp" />
     <ClCompile Include="Game\Enemy.cpp" />
     <ClCompile Include="Game\Fallingfloor.cpp" />
+    <ClCompile Include="Game\Field.cpp" />
     <ClCompile Include="Game\FireTrap.cpp" />
     <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="Game\Goal.cpp" />
     <ClCompile Include="Game\Map.cpp" />
     <ClCompile Include="Game\Player.cpp" />
+    <ClCompile Include="Game\Signboard.cpp" />
     <ClCompile Include="Game\Start.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Title\Title.cpp" />
@@ -29,11 +31,13 @@
     <ClInclude Include="Game\AnimData.h" />
     <ClInclude Include="Game\Enemy.h" />
     <ClInclude Include="Game\Fallingfloor.h" />
+    <ClInclude Include="Game\Field.h" />
     <ClInclude Include="Game\FireTrap.h" />
     <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Game\Goal.h" />
     <ClInclude Include="Game\Map.h" />
     <ClInclude Include="Game\Player.h" />
+    <ClInclude Include="Game\Signboard.h" />
     <ClInclude Include="Game\Start.h" />
     <ClInclude Include="Title\Title.h" />
   </ItemGroup>
