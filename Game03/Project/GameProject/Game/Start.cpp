@@ -6,7 +6,8 @@ Start::Start(const CVector2D& pos)
 	//‰æ‘œ•¡»
 	m_img = COPY_RESOURCE("Start", CImage);
 	m_pos = pos;
-	m_img.SetCenter(64, 56);
+	m_img.SetSize(128, 128);
+	m_img.SetCenter(70, 113);
 }
 
 void Start::Draw()

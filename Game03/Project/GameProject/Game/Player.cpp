@@ -16,10 +16,12 @@ Player::Player(const CVector2D& p, bool flip):
 		m_img.ChangeAnimation(0);
 		//座標設定
 		m_pos_old = m_pos = p ;
+		//キャラの画像サイズ
+		m_img.SetSize(64, 64);
 		//中心位置設定
-		m_img.SetCenter(28,32);
+		m_img.SetCenter(13,64);
 		//矩形判定の設定
-		m_rect = CRect(-23, -30, 0,0);
+		m_rect = CRect(0, -55,42,0);
 		//反転フラグ
 		m_flip = flip;
 		//通常状態へ
@@ -32,6 +34,7 @@ Player::Player(const CVector2D& p, bool flip):
         jumpcount = 0;
 		//無敵時間
 		invincibility = 0;
+		
 
 }
 
@@ -192,7 +195,7 @@ void Player::Draw()
 	//描画
 	m_img.Draw();
 	//当たり判定矩形の表示
-	//DrawRect();
+	DrawRect();
 }
 
 void Player::Collision(Base* b)
@@ -209,7 +212,7 @@ void Player::Collision(Base* b)
 			if (Base::CollisionRect(this,b) && invincibility<=0) {
 				//無敵時間3秒
 				invincibility = 180;
-					m_hp -= 50;
+					m_hp -= 25;
 					printf("当たった");
 					if (m_hp <= 0) {
 						m_state = eState_Down;
