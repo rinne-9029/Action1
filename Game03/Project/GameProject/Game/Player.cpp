@@ -17,11 +17,11 @@ Player::Player(const CVector2D& p, bool flip):
 		//座標設定
 		m_pos_old = m_pos = p ;
 		//キャラの画像サイズ
-		m_img.SetSize(64, 64);
+		m_img.SetSize(32, 32);
 		//中心位置設定
-		m_img.SetCenter(13,64);
+		m_img.SetCenter(16,32);
 		//矩形判定の設定
-		m_rect = CRect(0, -55,42,0);
+		m_rect = CRect(-10, -32,10,0);
 		//反転フラグ
 		m_flip = flip;
 		//通常状態へ
@@ -43,9 +43,9 @@ Player::Player(const CVector2D& p, bool flip):
 void Player::StateIdle()
 {
 	//移動量
-	const float move_speed = 6;
+	const float move_speed = 4;
 	//ジャンプ力
-    const float jump_pow = 12;
+    const float jump_pow = 8;
 	//移動フラグ
 	bool move_flag = false;
 
@@ -54,7 +54,7 @@ void Player::StateIdle()
 
 
 	//左移動
-	if (HOLD(CInput::eButton2)) {
+	if (HOLD(CInput::eButton2) && m_pos.x >= 15) {
 		//移動量を設定
 		m_pos.x += -move_speed;
 		//反転フラグ
@@ -63,7 +63,7 @@ void Player::StateIdle()
 	}
 
 	//右移動
-	if (HOLD(CInput::eButton4)) {
+	if (HOLD(CInput::eButton4) && m_pos.x <= 2540) {
 		//移動量を設定
 		m_pos.x += move_speed;
 		//反転フラグ
@@ -181,8 +181,9 @@ void Player::Update()
 		//アニメーション更新
 	m_img.UpdateAnimation();
 	//スクロール設定
+	if( m_pos.x >= 1280/2 && m_pos.x <= 2560-1280){
 	m_scroll.x = m_pos.x - 1280 / 2;
-	m_scroll.y = m_pos.y - 980;
+	}
 }
 
 
