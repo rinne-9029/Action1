@@ -1,5 +1,4 @@
 #include "FireTrap.h"
-#include"Game.h"
 
 
 //アニメーション設定

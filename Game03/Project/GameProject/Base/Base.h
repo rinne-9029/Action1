@@ -7,6 +7,7 @@ enum {
 	eType_Goal,
 	eType_Start,
 	eType_Signboard,
+	eType_Spike,
     eType_Player,
 	eType_Enemy,
 	eType_Fallingfloor,

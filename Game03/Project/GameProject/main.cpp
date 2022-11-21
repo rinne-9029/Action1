@@ -67,6 +67,10 @@ void Init(void)
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
 	ADD_RESOURCE("MapTip", CImage::CreateImage("Image/MapTip.png"));
 	ADD_RESOURCE("Goal", CImage::CreateImage("Image/Goal.png"));
+	ADD_RESOURCE("Spikeup", CImage::CreateImage("Image/Spikeup.png"));
+	ADD_RESOURCE("Spikedown", CImage::CreateImage("Image/Spikedown.png"));
+	ADD_RESOURCE("Spikeright", CImage::CreateImage("Image/Spikeright.png"));
+	ADD_RESOURCE("Spikeleft", CImage::CreateImage("Image/Spikeleft.png"));
 	ADD_RESOURCE("Start", CImage::CreateImage("Image/Start.png"));
 	ADD_RESOURCE("Signboard", CImage::CreateImage("Image/Signboard1.png"));
 	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player1.png", player_anim_data, 32, 32));

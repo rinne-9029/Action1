@@ -23,7 +23,9 @@
     <ClCompile Include="Game\Map.cpp" />
     <ClCompile Include="Game\Player.cpp" />
     <ClCompile Include="Game\Signboard.cpp" />
+    <ClCompile Include="Game\Spike.cpp" />
     <ClCompile Include="Game\Start.cpp" />
+    <ClCompile Include="Game\UI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Title\Title.cpp" />
   </ItemGroup>
@@ -40,7 +42,9 @@
     <ClInclude Include="Game\Map.h" />
     <ClInclude Include="Game\Player.h" />
     <ClInclude Include="Game\Signboard.h" />
+    <ClInclude Include="Game\Spike.h" />
     <ClInclude Include="Game\Start.h" />
+    <ClInclude Include="Game\UI.h" />
     <ClInclude Include="Title\Title.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

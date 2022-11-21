@@ -5,6 +5,7 @@
 #include"Effect.h"
 #include"FireTrap.h"
 #include"Map.h"
+#include"GameData.h"
 
 
 
@@ -208,13 +209,26 @@ void Player::Collision(Base* b)
 				b->SetKill();
 			}
 			break;
+			//ƒj[ƒhƒ‹‚Ì“–‚½‚è”»’è
+	case eType_Spike:
+		if (Base::CollisionRect(this, b) && invincibility <= 0) {
+			//–³“GŠÔ3•b
+			invincibility = 180;
+			m_hp -= 25;
+			if (m_hp <= 0) {
+				m_state = eState_Down;
+			}
+			else {
+				m_state = eState_Damage;
+			}
+		}
+		break;
 //‰Î’Œ‚Ì“–‚½‚è”»’è
 	case eType_FireTrap:
 			if (Base::CollisionRect(this,b) && invincibility<=0) {
 				//–³“GŠÔ3•b
 				invincibility = 180;
 					m_hp -= 25;
-					printf("“–‚½‚Á‚½");
 					if (m_hp <= 0) {
 						m_state = eState_Down;
 					}else {
