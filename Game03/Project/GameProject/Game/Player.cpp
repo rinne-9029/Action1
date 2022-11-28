@@ -182,8 +182,8 @@ void Player::Update()
 		//アニメーション更新
 	m_img.UpdateAnimation();
 	//スクロール設定
-	if( m_pos.x >= 1280/2 && m_pos.x <= 2560-1280){
-	m_scroll.x = m_pos.x - 1280 / 2;
+	if( m_pos.x >= 1280/3 && m_pos.x <= 2560-1496){
+	m_scroll.x = m_pos.x - 1280/3  ;
 	}
 }
 
@@ -203,13 +203,14 @@ void Player::Draw()
 void Player::Collision(Base* b)
 {
 	switch (b->m_type) {
-		//ゴール判定
+		//ゴールに当たった処理
 	case eType_Goal:
 			if (Base::CollisionRect(this, b)) {
 				b->SetKill();
 			}
 			break;
-			//ニードルの当たり判定
+
+			//ニードルに当たった処理
 	case eType_Spike:
 		if (Base::CollisionRect(this, b) && invincibility <= 0) {
 			//無敵時間3秒
@@ -223,7 +224,8 @@ void Player::Collision(Base* b)
 			}
 		}
 		break;
-//火柱の当たり判定
+
+//火柱に当たった処理
 	case eType_FireTrap:
 			if (Base::CollisionRect(this,b) && invincibility<=0) {
 				//無敵時間3秒
@@ -236,6 +238,12 @@ void Player::Collision(Base* b)
 					}
 		}
 		break;
+
+		//アイテムに当たった処理
+	case eType_Item:
+		if (Base::CollisionRect(this, b)) {
+			jumpcount = 0;
+		}
 	case eType_Field:
 		//Field型へキャスト、型変換できたら
 		if(Map* m=dynamic_cast<Map*>(b)){

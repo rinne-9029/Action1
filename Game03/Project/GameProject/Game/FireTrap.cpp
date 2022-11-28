@@ -30,17 +30,25 @@ FireTrap::FireTrap(const CVector2D& pos,int attack_no):
 	//再生アニメーション
 	m_img.ChangeAnimation(0);
 	m_img.SetCenter(16, 64);
-	//m_img.SetSize(64, 128);
-	m_rect = CRect(-5, -64, 5, 0);
+	
 	m_pos = pos;
 	//攻撃番号
 	m_attack_no = attack_no;
-
+    //フレーム
+	cnt = 0;
 }
 
 void FireTrap::Update()
 {
 	m_img.UpdateAnimation();
+	cnt++;
+	if (cnt >= 24) {
+		m_rect = CRect(-5, -64, 5, 0);
+	}
+	if (cnt == 56) {
+		cnt = 0;
+		m_rect = CRect(-5, 3, 5, 0);
+	}
 }
 
 void FireTrap::Draw()

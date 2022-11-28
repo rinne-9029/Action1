@@ -1,4 +1,5 @@
 #include"Title.h"
+#include"../Game/GameData.h"
 #include"../Game/Game.h"
 
 Title::Title():Base(eType_Scene),
@@ -17,9 +18,15 @@ Title::~Title()
 
 void Title::Update()
 {
-	//ボタン1でタイトル破棄
+	//ボタン1でタイトル破棄＆チュートリアルステージ
 	if (PUSH(CInput::eButton1)) {
 		SetKill();
+		GameData::stage = 0;
+	}
+	//ボタン3でタイトル破棄＆ステージ１
+	if (PUSH(CInput::eButton3)) {
+		SetKill();
+		GameData::stage = 1;
 	}
 }
 

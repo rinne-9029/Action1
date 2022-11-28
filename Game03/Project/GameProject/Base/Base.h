@@ -8,6 +8,7 @@ enum {
 	eType_Start,
 	eType_Signboard,
 	eType_Spike,
+	eType_Item,
     eType_Player,
 	eType_Enemy,
 	eType_Fallingfloor,

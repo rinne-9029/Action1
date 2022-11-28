@@ -4,6 +4,7 @@
 
 class FireTrap : public Base {
 private:
+	int cnt;
 	CImage m_img;
 	int m_attack_no;
 public:
