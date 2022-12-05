@@ -105,7 +105,7 @@ Map::Map(int stage):Base(eType_Field)
 		//背景
 		Base::Add(new Field());
 		//プレイヤー生成
-		Base::Add(new Player(CVector2D(MAP_TIP_SIZE * 20, MAP_TIP_SIZE * 31), false));
+		Base::Add(new Player(CVector2D(MAP_TIP_SIZE * 15, MAP_TIP_SIZE * 31), false));
 		//ゴール配置
 		Base::Add(new Goal(CVector2D(MAP_TIP_SIZE * 78, MAP_TIP_SIZE * 31)));
 		//スタート配置
@@ -121,7 +121,9 @@ Map::Map(int stage):Base(eType_Field)
 
 		//アイテム配置
 		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 22, MAP_TIP_SIZE * 29)));
-
+		
+		 
+		
 		//看板配置
 		//Base::Add(new Signboard(CVector2D(MAP_TIP_SIZE * 6, MAP_TIP_SIZE * 21)));
 		

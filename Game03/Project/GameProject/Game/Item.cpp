@@ -59,7 +59,7 @@ void Item::Draw()
 {
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
-	DrawRect();
+	//DrawRect();
 }
 
 void Item::Collision(Base* b)
