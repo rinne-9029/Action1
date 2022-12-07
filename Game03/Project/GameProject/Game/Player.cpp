@@ -213,8 +213,8 @@ void Player::Collision(Base* b)
 			//ƒj[ƒhƒ‹‚É“–‚½‚Á‚½ˆ—
 	case eType_Spike:
 		if (Base::CollisionRect(this, b) && invincibility <= 0) {
-			//–³“GŠÔ3•b
-			invincibility = 180;
+			//–³“GŠÔ2•b
+			invincibility = 60;
 			m_hp -= 25;
 			if (m_hp <= 0) {
 				m_state = eState_Down;
@@ -228,8 +228,8 @@ void Player::Collision(Base* b)
 //‰Î’Œ‚É“–‚½‚Á‚½ˆ—
 	case eType_FireTrap:
 			if (Base::CollisionRect(this,b) && invincibility<=0) {
-				//–³“GŠÔ3•b
-				invincibility = 180;
+				//–³“GŠÔ2•b
+				invincibility = 60;
 					m_hp -= 25;
 					if (m_hp <= 0) {
 						m_state = eState_Down;

@@ -1,4 +1,5 @@
 #include"Item.h"
+#include"Map.h"
 
 
 //アニメーション設定
@@ -38,7 +39,7 @@ Item::Item(const CVector2D& pos)
 	m_img.ChangeAnimation(0);
 	m_img.SetSize(32, 32);
 	m_img.SetCenter(16,16);
-    m_rect = CRect(-12, -12, 12, 12);
+    m_rect = CRect(-10, -10, 10, 10);
 
 	m_pos = pos;
 }
@@ -52,6 +53,7 @@ if (m_img.CheckAnimationEnd()) {
 	//アイテム削除
     SetKill();
 }
+
 
 }
 
@@ -67,7 +69,7 @@ void Item::Collision(Base* b)
 	switch (b->m_type) {
 	case eType_Player:
 		if (Base::CollisionRect(this, b)) {
-		    m_img.ChangeAnimation(eAnimhit, false);
+			m_img.ChangeAnimation(eAnimhit, false);
 			
 		}
 		
