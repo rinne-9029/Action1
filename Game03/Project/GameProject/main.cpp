@@ -64,19 +64,28 @@ void Init(void)
 	//-----------------------------------------------------
 	
 	//画像の事前読み込み
+	//タイトル画像
 	ADD_RESOURCE("Title", CImage::CreateImage("Image/Title.png"));
+	//マップチップ画像
 	ADD_RESOURCE("MapTip", CImage::CreateImage("Image/MapTip.png"));
+	//ゴール画像
 	ADD_RESOURCE("Goal", CImage::CreateImage("Image/Goal.png"));
+	//トゲ画像
 	ADD_RESOURCE("Spikeup", CImage::CreateImage("Image/Spikeup.png"));
 	ADD_RESOURCE("Spikedown", CImage::CreateImage("Image/Spikedown.png"));
 	ADD_RESOURCE("Spikeright", CImage::CreateImage("Image/Spikeright.png"));
 	ADD_RESOURCE("Spikeleft", CImage::CreateImage("Image/Spikeleft.png"));
+	//スタート位置画像
 	ADD_RESOURCE("Start", CImage::CreateImage("Image/Start.png"));
+	//看板画像
 	ADD_RESOURCE("Signboard", CImage::CreateImage("Image/Signboard1.png"));
+	//プレイヤー画像
 	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player1.png", player_anim_data, 32, 32));
+	//敵画像
 	ADD_RESOURCE("Enemy", CImage::CreateImage("Image/Enemy.png", enemy_anim_data, 256, 256));
-	ADD_RESOURCE("Background", CImage::CreateImage("Image/Background1.png"));
-
+	//背景
+	ADD_RESOURCE("Background", CImage::CreateImage("Image/Background/Background1.png"));
+	//落ちる床画像
 	//ADD_RESOURCE("Fallingfloor", CImage::CreateImage("Image/Fallingfloor/Off"));
 
 	

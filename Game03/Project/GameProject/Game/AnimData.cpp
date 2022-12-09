@@ -54,20 +54,16 @@ static TexAnim playerWallJump[] = {
 	{ 39,2 },
 	{ 40,2 },
 };
-//ここまでアニメーション完成
 
 static TexAnim playerDamage[] = {
-	{ 88,2 },
-	{ 89,2 },
-	{ 90,2 },
-	{ 91,2 },
+	{ 50,2 },
+	{ 51,2 },
+	{ 52,2 },
+	{ 53,2 },
+	{ 54,2 },
 };
-static TexAnim playerDamageEnd[] = {
-	{ 92,2 },
-	{ 93,2 },
-	{ 94,2 },
-	{ 95,2 },
-};
+
+//ここまでアニメーション完成
 static TexAnim playerDeath[] = {
 	{ 96,4 },
 	{ 97,4 },
@@ -131,7 +127,6 @@ TexAnimData player_anim_data[] = {
 	ANIMDATA(playerDoubleJump),
 	ANIMDATA(playerWallJump),
 	ANIMDATA(playerDamage),
-	ANIMDATA(playerDamageEnd),
 	ANIMDATA(playerDeath),
 	ANIMDATA(playerDown),
 	ANIMDATA(playerDownGround),

@@ -134,7 +134,7 @@ void Player::StateDoubleJump()
 //ƒ_ƒ[ƒWó‘Ô
 void Player::StateDamage()
 {
-	m_img.ChangeAnimation(eAnimDamage, false);
+	m_img.ChangeAnimation(eAnimDamage,false);
 	if (m_img.CheckAnimationEnd()) {
 		m_state = eState_Idle;
 	}
@@ -213,7 +213,7 @@ void Player::Collision(Base* b)
 			//ƒj[ƒhƒ‹‚É“–‚½‚Á‚½ˆ—
 	case eType_Spike:
 		if (Base::CollisionRect(this, b) && invincibility <= 0) {
-			//–³“GŠÔ2•b
+			//–³“GŠÔ1•b
 			invincibility = 60;
 			m_hp -= 25;
 			if (m_hp <= 0) {
@@ -228,7 +228,7 @@ void Player::Collision(Base* b)
 //‰Î’Œ‚É“–‚½‚Á‚½ˆ—
 	case eType_FireTrap:
 			if (Base::CollisionRect(this,b) && invincibility<=0) {
-				//–³“GŠÔ2•b
+				//–³“GŠÔ1•b
 				invincibility = 60;
 					m_hp -= 25;
 					if (m_hp <= 0) {

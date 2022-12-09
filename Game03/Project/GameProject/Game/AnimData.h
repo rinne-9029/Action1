@@ -16,7 +16,6 @@ enum  {
 	eAnimAttack03,
 	eAnimAttack03End,
 	eAnimDamage,
-	eAnimDamageEnd,
 	eAnimDeath,
 	eAnimDown,
 	eAnimDownGround,
