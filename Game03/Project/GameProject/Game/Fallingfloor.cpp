@@ -23,7 +23,9 @@ void Fallingfloor::StateOn()
 
 void Fallingfloor::StateOff()
 {
-
+	//d—Í‚É‚æ‚é—Ž‰º
+	m_vec.y += GRAVITY;
+	m_pos += m_vec;
 }
 
 
@@ -70,6 +72,9 @@ void Fallingfloor::Collision(Base* b)
 {
 	switch (b->m_type) {
 	case eType_Player:
+		if (Base::CollisionRect(this, b)) {
+			m_state = eState_Off;
+		}
 		break;
 	}
 }

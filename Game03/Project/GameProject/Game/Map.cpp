@@ -189,6 +189,9 @@ Map::Map(int stage):Base(eType_Field)
 		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 14, MAP_TIP_SIZE * 6)));
 		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 25, MAP_TIP_SIZE * 14)));
 
+		//óéÇøÇÈè∞
+		Base::Add(new Fallingfloor(CVector2D(MAP_TIP_SIZE * 33, MAP_TIP_SIZE * 14)));
+
 		//ÉSÅ[Éãîzíu
 		Base::Add(new Goal(CVector2D(MAP_TIP_SIZE * 78, MAP_TIP_SIZE * 31)));
 

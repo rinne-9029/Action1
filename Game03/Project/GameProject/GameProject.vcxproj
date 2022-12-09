@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="Base\Base.cpp" />
     <ClCompile Include="Game\AnimData.cpp" />
+    <ClCompile Include="Game\Effect.cpp" />
     <ClCompile Include="Game\Enemy.cpp" />
     <ClCompile Include="Game\Fallingfloor.cpp" />
     <ClCompile Include="Game\Field.cpp" />
@@ -33,6 +34,7 @@
   <ItemGroup>
     <ClInclude Include="Base\Base.h" />
     <ClInclude Include="Game\AnimData.h" />
+    <ClInclude Include="Game\Effect.h" />
     <ClInclude Include="Game\Enemy.h" />
     <ClInclude Include="Game\Fallingfloor.h" />
     <ClInclude Include="Game\Field.h" />

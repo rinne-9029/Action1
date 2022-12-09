@@ -76,47 +76,11 @@ static TexAnim playerDeath[] = {
 };
 
 static TexAnim playerDown[] = {
-	{ 104,4 },
-	{ 105,4 },
-	{ 106,4 },
-	{ 107,4 },
-	{ 108,4 },
-};
-static TexAnim playerDownGround[] = {
-	{ 109,4 },
-	{ 110,4 },
-	{ 111,4 },
-};
-static TexAnim playerWakeup[] = {
-	{ 112,4 },
-	{ 113,4 },
-	{ 114,4 },
-	{ 115,4 },
-	{ 116,4 },
-	{ 117,4 },
-	{ 118,4 },
-};
-static TexAnim playerGuard[] = {
-	//	{ 120,4 },
-	//	{ 121,4 },
-	{ 122,4 },
-};
-static TexAnim playerGuardEnd[] = {
-	{ 122,4 },
-	{ 121,4 },
-	{ 120,4 },
-};
-static TexAnim playerCrash[] = {
-	{ 128,4 },
-	{ 129,4 },
-	{ 130,4 },
-	{ 131,90 },
-};
-static TexAnim playerCrash01End[] = {
-	{ 131,4 },
-	{ 130,4 },
-	{ 129,4 },
-	{ 128,4 },
+	{ 104,1 },
+	{ 105,1 },
+	{ 106,1 },
+	{ 107,1 },
+	{ 108,1 },
 };
 
 TexAnimData player_anim_data[] = {
@@ -127,14 +91,7 @@ TexAnimData player_anim_data[] = {
 	ANIMDATA(playerDoubleJump),
 	ANIMDATA(playerWallJump),
 	ANIMDATA(playerDamage),
-	ANIMDATA(playerDeath),
 	ANIMDATA(playerDown),
-	ANIMDATA(playerDownGround),
-	ANIMDATA(playerWakeup),
-	ANIMDATA(playerGuard),
-	ANIMDATA(playerGuardEnd),
-	ANIMDATA(playerCrash),
-	ANIMDATA(playerCrash01End),
 };
 
 static TexAnim enemyIdle[] = {
@@ -342,4 +299,15 @@ static TexAnim _effect_slash[] = {
 };
 TexAnimData effect_slash_anim_data[] = {
 	ANIMDATA(_effect_slash),
+};
+
+static TexAnim _effect_desappearing[] = {
+	{ 0,4 },
+	{ 1,4 },
+	{ 2,4 },
+	{ 3,4 },
+	{ 4,4 },
+};
+TexAnimData effect_desappearing_anim_data[] = {
+	ANIMDATA(_effect_desappearing),
 };

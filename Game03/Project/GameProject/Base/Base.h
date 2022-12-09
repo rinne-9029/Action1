@@ -11,15 +11,16 @@ enum {
 	eType_Item,
     eType_Player,
 	eType_Enemy,
-	eType_Fallingfloor,
 	eType_FireTrap,
 	eType_Player_Attack,
 	eType_Enemy_Attack,
 	eType_Effect,
     eType_UI,
 	eType_Scene,
-	
+	eType_Fallingfloor,
 };
+
+
 
 class Base {
 public:

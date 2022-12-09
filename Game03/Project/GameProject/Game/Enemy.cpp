@@ -81,7 +81,7 @@ void Enemy::StateIdle()
 }
 void Enemy::StateAttack() {
 	//攻撃アニメーション変更
-	m_img.ChangeAnimation(eAnimAttack01, false);
+	//m_img.ChangeAnimation(eAnimAttack01, false);
 	//3番目のパターンなら
 	if (m_img.GetIndex() == 3) {
 		if (m_flip) {

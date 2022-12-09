@@ -10,6 +10,7 @@
 #include "Game/Field.h"
 #include "Base/Base.h"
 #include "Game/Map.h"
+#include "Game/Effect.h"
 //--------------------------------------------
 //グローバル変数領域
 //--------------------------------------------
@@ -87,6 +88,8 @@ void Init(void)
 	ADD_RESOURCE("Background", CImage::CreateImage("Image/Background/Background1.png"));
 	//落ちる床画像
 	//ADD_RESOURCE("Fallingfloor", CImage::CreateImage("Image/Fallingfloor/Off"));
+	//プレイヤー死亡時のエフェクト
+	ADD_RESOURCE("Effect_Desappearing", CImage::CreateImage("Image/Desappearing.png", effect_desappearing_anim_data, 96, 96));
 
 	
 	//タイトルの読み込み

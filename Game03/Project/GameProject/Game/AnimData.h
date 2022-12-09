@@ -9,15 +9,11 @@ enum  {
 	eAnimJumpDown,
 	eAnimDoubleJump,
 	eAnimWallJump,
-	eAnimAttack01,
-	eAnimAttack01End,
-	eAnimAttack02,
-	eAnimAttack02End,
-	eAnimAttack03,
-	eAnimAttack03End,
 	eAnimDamage,
 	eAnimDeath,
 	eAnimDown,
+	eAnimAttack01,
+	eAnimAttack01End,
 	eAnimDownGround,
 	eAnimWakeUp,
 	eAnimGuard,
@@ -40,3 +36,4 @@ extern TexAnimData effect_blood_anim_data[];
 extern TexAnimData effect_smoke_anim_data[];
 extern TexAnimData effect_slash_anim_data[];
 extern TexAnimData effect_bomb_anim_data[];
+extern TexAnimData effect_desappearing_anim_data[];

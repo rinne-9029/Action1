@@ -6,6 +6,7 @@
 #include"FireTrap.h"
 #include"Map.h"
 #include"GameData.h"
+#include"Fallingfloor.h"
 
 
 
@@ -145,6 +146,7 @@ void Player::StateDown()
 {
 	m_img.ChangeAnimation(eAnimDown, false);
 	if (m_img.CheckAnimationEnd()) {
+		Base::Add(new Effect("Effect_Desappearing", m_pos + CVector2D(0, -40), m_flip));
 		SetKill();
 	}
 }
@@ -244,6 +246,17 @@ void Player::Collision(Base* b)
 		if (Base::CollisionRect(this, b)) {
 			jumpcount = 0;
 		}
+		break;
+
+//落ちる床の上に乗った処理
+	case eType_Fallingfloor:
+		if (Base::CollisionRect(this, b)) {
+			m_pos.y = m_pos_old.y;
+			m_vec.y = 0;
+			m_is_ground = true;
+		}
+		break;
+
 	case eType_Field:
 		//Field型へキャスト、型変換できたら
 		if(Map* m=dynamic_cast<Map*>(b)){
@@ -258,5 +271,6 @@ void Player::Collision(Base* b)
 			}
 		}
 		break;
+		
 	}
 }
