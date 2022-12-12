@@ -72,10 +72,10 @@ void Init(void)
 	//ゴール画像
 	ADD_RESOURCE("Goal", CImage::CreateImage("Image/Goal.png"));
 	//トゲ画像
-	ADD_RESOURCE("Spikeup", CImage::CreateImage("Image/Spikeup.png"));
-	ADD_RESOURCE("Spikedown", CImage::CreateImage("Image/Spikedown.png"));
-	ADD_RESOURCE("Spikeright", CImage::CreateImage("Image/Spikeright.png"));
-	ADD_RESOURCE("Spikeleft", CImage::CreateImage("Image/Spikeleft.png"));
+	ADD_RESOURCE("Spikeup", CImage::CreateImage("Image/Spike/Spikeup.png"));
+	ADD_RESOURCE("Spikedown", CImage::CreateImage("Image/Spike/Spikedown.png"));
+	ADD_RESOURCE("Spikeright", CImage::CreateImage("Image/Spike/Spikeright.png"));
+	ADD_RESOURCE("Spikeleft", CImage::CreateImage("Image/Spike/Spikeleft.png"));
 	//スタート位置画像
 	ADD_RESOURCE("Start", CImage::CreateImage("Image/Start.png"));
 	//看板画像

@@ -51,7 +51,7 @@ void Player::StateIdle()
 	//移動フラグ
 	bool move_flag = false;
 
-	//無敵時間
+	//1フレームごとに無敵時間減少
 	invincibility -= 1;
 
 
@@ -135,8 +135,9 @@ void Player::StateDoubleJump()
 //ダメージ状態
 void Player::StateDamage()
 {
-	m_img.ChangeAnimation(eAnimDamage,false);
+	m_img.ChangeAnimation(eAnimDamage,false);	
 	if (m_img.CheckAnimationEnd()) {
+        GameData::s_kosu -= 1;
 		m_state = eState_Idle;
 	}
 }
@@ -144,11 +145,9 @@ void Player::StateDamage()
 //ダウン状態
 void Player::StateDown()
 {
-	m_img.ChangeAnimation(eAnimDown, false);
-	if (m_img.CheckAnimationEnd()) {
+	    GameData::s_kosu -= 1;
 		Base::Add(new Effect("Effect_Desappearing", m_pos + CVector2D(0, -40), m_flip));
 		SetKill();
-	}
 }
 
 
@@ -217,7 +216,7 @@ void Player::Collision(Base* b)
 		if (Base::CollisionRect(this, b) && invincibility <= 0) {
 			//無敵時間1秒
 			invincibility = 60;
-			m_hp -= 25;
+			m_hp -= 20;
 			if (m_hp <= 0) {
 				m_state = eState_Down;
 			}
@@ -232,7 +231,7 @@ void Player::Collision(Base* b)
 			if (Base::CollisionRect(this,b) && invincibility<=0) {
 				//無敵時間1秒
 				invincibility = 60;
-					m_hp -= 25;
+					m_hp -= 20;
 					if (m_hp <= 0) {
 						m_state = eState_Down;
 					}else {
@@ -248,8 +247,18 @@ void Player::Collision(Base* b)
 		}
 		break;
 
-//落ちる床の上に乗った処理
+        //落ちる床の上に乗る
 	case eType_Fallingfloor:
+		if (Base::CollisionRect(this, b)) {
+			
+			m_pos.x = m_pos_old.x;
+            m_vec.y = 0;
+			m_is_ground = true;
+		}
+		break;
+
+		//スタート位置の上に乗る
+	case eType_Start:
 		if (Base::CollisionRect(this, b)) {
 			m_pos.y = m_pos_old.y;
 			m_vec.y = 0;

@@ -1,6 +1,7 @@
 #include"Fallingfloor.h"
 #include"Player.h"
 #include"Game.h"
+#include"Map.h"
 
 //アニメーション設定
 static TexAnim _falling_floor[] = {
@@ -24,7 +25,7 @@ void Fallingfloor::StateOn()
 void Fallingfloor::StateOff()
 {
 	//重力による落下
-	m_vec.y += GRAVITY;
+	m_vec.y += 9.8/30;
 	m_pos += m_vec;
 }
 
@@ -54,6 +55,10 @@ void Fallingfloor::Update()
 		StateOff();
 		break;
 	}
+	if (m_pos.y >= 1500) {
+		SetKill();
+		Base::Add(new Fallingfloor(CVector2D()));
+	}
 
 
 	
@@ -64,7 +69,7 @@ void Fallingfloor::Draw()
 {
 	m_img.SetPos(GetScreenPos(m_pos));
 	m_img.Draw();
-	DrawRect();
+	//DrawRect();
 }
 
 

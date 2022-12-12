@@ -16,6 +16,7 @@ enum {
 	eType_Enemy_Attack,
 	eType_Effect,
     eType_UI,
+	eType_UI2,
 	eType_Scene,
 	eType_Fallingfloor,
 };

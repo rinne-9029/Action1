@@ -9,8 +9,6 @@ private:
 		eState_Off,
 	};
 	CImage m_img;
-	int count;
-	float m_moveSpeed;
 	//ó‘Ô•Ï”
 	int m_state;
 	//Šeó‘Ô–¼

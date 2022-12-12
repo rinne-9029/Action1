@@ -22,11 +22,15 @@ void Title::Update()
 	if (PUSH(CInput::eButton1)) {
 		SetKill();
 		GameData::stage = 0;
+		GameData::s_count = 0;
+		GameData::s_kosu = 5;
 	}
 	//ボタン3でタイトル破棄＆ステージ１
 	if (PUSH(CInput::eButton3)) {
 		SetKill();
 		GameData::stage = 1;
+		GameData::s_count = 0;
+		GameData::s_kosu = 5;
 	}
 }
 

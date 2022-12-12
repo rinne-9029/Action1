@@ -11,7 +11,10 @@ Game::Game() :Base(eType_Scene)
 {
 	//ステージごとのマップチップを読み込む処理
 	Base::Add(new Map(GameData::stage));
+	//時間を読み込む処理
 	Base::Add(new UI());
+	//HPを読み込む処理
+	Base::Add(new UI2());
 
 }
 Game::~Game()
@@ -27,12 +30,10 @@ void Game::Update()
 	//ゴールが無ければゲームシーン終了
 	if (!Base::FindObject(eType_Goal)) {
 		SetKill();
-		GameData::s_count = 0;
 	}
 	//プレイヤー死亡　ボタン１でゲームシーン終了
 	if (!Base::FindObject(eType_Player) && PUSH(CInput::eButton1)) {
 		SetKill();
-		GameData::s_count = 0;
 	}
 }
 

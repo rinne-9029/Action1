@@ -10,3 +10,13 @@ public:
 	void Update();
 	void Draw();
 };
+
+class UI2 :public Base {
+public:
+	CImage m_img;
+	int kosu;
+public:
+	UI2();
+	void Update();
+	void Draw();
+};

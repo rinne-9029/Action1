@@ -26,3 +26,21 @@ void UI::Draw()
 		m_img.Draw();
 	}
 }
+
+UI2::UI2() :Base(eType_UI2)
+{
+	m_img.Load("Image/UI/LIFE.png");
+}
+
+void UI2::Update()
+{
+}
+
+void UI2::Draw()
+{
+	for (int i = GameData::s_kosu; i > 0; i--) {
+		m_img.SetSize(32, 32);
+		m_img.SetPos(300 - 32 * i, 0);
+		m_img.Draw();
+	}
+}
