@@ -13,7 +13,7 @@ private:
 	CImage m_img;
 	int m_map_data[MAP_HEIGHT][MAP_WIDTH];
 public:
-	Map(int stage);
+	Map(int stage,int player_id,int layer);
 	void Draw();
 	//指定座標のチップ番号を取得
 	int GetTip(const CVector2D& pos);

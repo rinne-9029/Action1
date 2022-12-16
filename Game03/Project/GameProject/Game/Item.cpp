@@ -30,8 +30,8 @@ TexAnimData itemAnimData[] = {
 
 
 
-Item::Item(const CVector2D& pos)
-	:Base(eType_Item)
+Item::Item(int layer,const CVector2D& pos)
+	:Base(eType_Item,layer)
 {
 	//‰æ‘œ“Ç‚İ‚İ
 	m_img.Load("Image/Jumpitem/Item.png", itemAnimData, 18, 18);

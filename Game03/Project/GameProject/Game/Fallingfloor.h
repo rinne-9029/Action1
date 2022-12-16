@@ -15,7 +15,7 @@ private:
 	void StateOn();
 	void StateOff();
 public:
-	Fallingfloor(const CVector2D&pos);
+	Fallingfloor(int layer,const CVector2D&pos);
 	void Update();
 	void Draw();
 	void Collision(Base* b);

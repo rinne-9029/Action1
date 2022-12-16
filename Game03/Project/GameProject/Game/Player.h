@@ -16,6 +16,8 @@ private:
 	bool m_flip;
 	//着地フラグ
 	bool m_is_ground;
+	//1P(0)or2P(1)
+	int m_player_id;
 	//ヒットポイント
 	int m_hp;
 	//ジャンプ回数
@@ -31,7 +33,7 @@ private:
 	void StateDown();
 
 public:
-	Player(const CVector2D& p, bool flip);
+	Player(int id,int layer,const CVector2D& p, bool flip);
 	void Update();
 	void Draw();
 	void Collision(Base* b);

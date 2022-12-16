@@ -19,7 +19,7 @@ Title::~Title()
 void Title::Update()
 {
 	//ボタン1でタイトル破棄＆チュートリアルステージ
-	if (PUSH(CInput::eButton1)) {
+	if (PUSH(CInput::eButton2)) {
 		SetKill();
 		GameData::stage = 0;
 		GameData::s_count = 0;
@@ -39,6 +39,6 @@ void Title::Draw()
 	m_img.Draw();
 	//文字表示
 	m_title_text.Draw(64, 256, 0, 0, 0, "Title");
-	m_title_text.Draw(64, 512, 0, 0, 0, "Push W");
-	m_title_text.Draw(64, 560, 0, 0, 0, "Push S");
+	m_title_text.Draw(64, 512, 0, 0, 0, "Push W or Button2");
+	m_title_text.Draw(64, 560, 0, 0, 0, "Push S or Button3");
 }

@@ -1,7 +1,7 @@
 #include"Effect.h"
 
-Effect::Effect(const char* name, const CVector2D& pos, bool flip):
-Base(eType_Effect)
+Effect::Effect(int layer,const char* name, const CVector2D& pos, bool flip):
+Base(eType_Effect,layer)
 {
 	//‰æ‘œ•¡»
 	m_img = COPY_RESOURCE(name, CImage);

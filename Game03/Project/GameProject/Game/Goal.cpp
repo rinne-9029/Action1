@@ -1,7 +1,7 @@
 #include"Goal.h"
 
-Goal::Goal(const CVector2D& pos)
-	:Base(eType_Goal)
+Goal::Goal(int layer,const CVector2D& pos)
+	:Base(eType_Goal,layer)
 {
 	//‰æ‘œ•¡»
 	m_img = COPY_RESOURCE("Goal", CImage);

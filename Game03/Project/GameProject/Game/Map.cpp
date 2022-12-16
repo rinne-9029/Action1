@@ -31,19 +31,19 @@ static int stage0data[MAP_HEIGHT][MAP_WIDTH] = {
 		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//15
 		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//16
 		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//17
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//18
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//19
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//20
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//21
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//22
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//23
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//24
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//25
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//26
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//27
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 0, 0, 0, 0, 0, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//28
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 0, 0, 0, 0, 0, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//29
-		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 0, 0, 0, 0, 0, 7, 7, 7, 7, 0, 0, 7, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//30
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//18
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//19
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//20
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//21
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//22
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//23
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//24
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//25
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//26
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//27
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//28
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//29
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},//30
 		{ 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7},//31
 		{ 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7},//32
 		{ 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7},//33
@@ -91,7 +91,7 @@ static int stage1data[MAP_HEIGHT][MAP_WIDTH] = {
 
 
 
-Map::Map(int stage):Base(eType_Field)
+Map::Map(int stage, int player_id,int layer):Base(eType_Field, layer)
 {
 	//画像複製
 	m_img = COPY_RESOURCE("MapTip", CImage);
@@ -103,20 +103,28 @@ Map::Map(int stage):Base(eType_Field)
 		//ステージ生成
 		memcpy(m_map_data, stage0data, sizeof(stage0data));
 		//背景
-		Base::Add(new Field());
+		Base::Add(new Field(layer));
 		//プレイヤー生成
-		Base::Add(new Player(CVector2D(MAP_TIP_SIZE * 15, MAP_TIP_SIZE * 27), false));
+		Base::Add(new Player(player_id,layer,CVector2D(MAP_TIP_SIZE * 15, MAP_TIP_SIZE * 27), false));
 		//ゴール配置
-		Base::Add(new Goal(CVector2D(MAP_TIP_SIZE * 78, MAP_TIP_SIZE * 30)));
+		Base::Add(new Goal(layer,CVector2D(MAP_TIP_SIZE * 78, MAP_TIP_SIZE * 30)));
 		//スタート配置
 		//Base::Add(new Start(CVector2D(MAP_TIP_SIZE * 3, MAP_TIP_SIZE * 21)));
 
 		//トゲ配置 0->UP 1->Down 2->Right 3->Left
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 75, MAP_TIP_SIZE * 30),0));
-		/*
-		//アイテム配置
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 22, MAP_TIP_SIZE * 29)));
+		Base::Add(new Spike(layer, CVector2D(MAP_TIP_SIZE * 75, MAP_TIP_SIZE * 30), 0));
+		Base::Add(new Spike(layer, CVector2D(MAP_TIP_SIZE * 74, MAP_TIP_SIZE * 30), 0));
+		Base::Add(new Spike(layer, CVector2D(MAP_TIP_SIZE * 73, MAP_TIP_SIZE * 30), 0));
+		Base::Add(new Spike(layer, CVector2D(MAP_TIP_SIZE * 72, MAP_TIP_SIZE * 30), 0));
+		Base::Add(new Spike(layer, CVector2D(MAP_TIP_SIZE * 71, MAP_TIP_SIZE * 30), 0));
+		Base::Add(new Spike(layer, CVector2D(MAP_TIP_SIZE * 70, MAP_TIP_SIZE * 30), 0));
+		Base::Add(new Spike(layer, CVector2D(MAP_TIP_SIZE * 69, MAP_TIP_SIZE * 30), 0));
+		Base::Add(new Spike(layer, CVector2D(MAP_TIP_SIZE * 68, MAP_TIP_SIZE * 30), 0));
+		Base::Add(new Spike(layer, CVector2D(MAP_TIP_SIZE * 67, MAP_TIP_SIZE * 30), 0));
 		
+		//アイテム配置
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 45, MAP_TIP_SIZE * 19)));
+		/*
 		 
 		
 		//看板配置
@@ -128,75 +136,75 @@ Map::Map(int stage):Base(eType_Field)
 		//火柱の配置
 		Base::Add(new FireTrap(CVector2D(MAP_TIP_SIZE * 40, MAP_TIP_SIZE * 32),false));
 		*/
-        Base::Add(new Fallingfloor(CVector2D(MAP_TIP_SIZE * 26, MAP_TIP_SIZE * 20)));
+        Base::Add(new Fallingfloor(layer,CVector2D(MAP_TIP_SIZE * 26, MAP_TIP_SIZE * 20)));
 		break;
 		//ステージ1
-	case 1:
+		case 1:
 		//ステージ生成
 		memcpy(m_map_data, stage1data, sizeof(stage1data));
 		//背景
-		Base::Add(new Field());
+		Base::Add(new Field(layer));
 		//プレイヤー生成
-		Base::Add(new Player(CVector2D(MAP_TIP_SIZE * 15, MAP_TIP_SIZE * 31), false));
+		Base::Add(new Player(player_id,layer,CVector2D(MAP_TIP_SIZE * 15, MAP_TIP_SIZE * 31), false));
 
 		//スタート位置生成
 		 Base::Add(new Start(CVector2D(480-16,992+23)));
 
 		//トゲ配置 0->UP 1->Down 2->Right 3->Left
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 14, MAP_TIP_SIZE * 19), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 13, MAP_TIP_SIZE * 19), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 12, MAP_TIP_SIZE * 19), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 11, MAP_TIP_SIZE * 19), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 10, MAP_TIP_SIZE * 19), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 9, MAP_TIP_SIZE * 19), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 8, MAP_TIP_SIZE * 19), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 7, MAP_TIP_SIZE * 19), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 6, MAP_TIP_SIZE * 19), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 5, MAP_TIP_SIZE * 19), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 4, MAP_TIP_SIZE * 19), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 14, MAP_TIP_SIZE * 19), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 13, MAP_TIP_SIZE * 19), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 12, MAP_TIP_SIZE * 19), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 11, MAP_TIP_SIZE * 19), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 10, MAP_TIP_SIZE * 19), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 9, MAP_TIP_SIZE * 19), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 8, MAP_TIP_SIZE * 19), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 7, MAP_TIP_SIZE * 19), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 6, MAP_TIP_SIZE * 19), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 5, MAP_TIP_SIZE * 19), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 4, MAP_TIP_SIZE * 19), 0));
 		
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 5, MAP_TIP_SIZE * 10), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 6, MAP_TIP_SIZE *10), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 7, MAP_TIP_SIZE * 10), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 8, MAP_TIP_SIZE * 10), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 9, MAP_TIP_SIZE * 10), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 10, MAP_TIP_SIZE * 10), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 11, MAP_TIP_SIZE * 10), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 12, MAP_TIP_SIZE * 10), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 13, MAP_TIP_SIZE * 10), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 14, MAP_TIP_SIZE * 10), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 15, MAP_TIP_SIZE * 10), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 16, MAP_TIP_SIZE * 10), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 17, MAP_TIP_SIZE *10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 5, MAP_TIP_SIZE * 10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 6, MAP_TIP_SIZE *10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 7, MAP_TIP_SIZE * 10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 8, MAP_TIP_SIZE * 10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 9, MAP_TIP_SIZE * 10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 10, MAP_TIP_SIZE * 10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 11, MAP_TIP_SIZE * 10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 12, MAP_TIP_SIZE * 10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 13, MAP_TIP_SIZE * 10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 14, MAP_TIP_SIZE * 10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 15, MAP_TIP_SIZE * 10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 16, MAP_TIP_SIZE * 10), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 17, MAP_TIP_SIZE *10), 0));
 
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 25, MAP_TIP_SIZE * 17), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 26, MAP_TIP_SIZE * 17), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 27, MAP_TIP_SIZE * 17), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 25, MAP_TIP_SIZE * 17), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 26, MAP_TIP_SIZE * 17), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 27, MAP_TIP_SIZE * 17), 0));
 
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 22, MAP_TIP_SIZE * 18), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 23, MAP_TIP_SIZE * 18), 0));
-		Base::Add(new Spike(CVector2D(MAP_TIP_SIZE * 24, MAP_TIP_SIZE * 18), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 22, MAP_TIP_SIZE * 18), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 23, MAP_TIP_SIZE * 18), 0));
+		Base::Add(new Spike(layer,CVector2D(MAP_TIP_SIZE * 24, MAP_TIP_SIZE * 18), 0));
 
 		//アイテム配置
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 20, MAP_TIP_SIZE * 27)));
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 20, MAP_TIP_SIZE * 24)));
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 20, MAP_TIP_SIZE * 21)));
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 11, MAP_TIP_SIZE * 15)));
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 7, MAP_TIP_SIZE * 15)));
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 4, MAP_TIP_SIZE * 13)));
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 4, MAP_TIP_SIZE * 10)));
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 4, MAP_TIP_SIZE * 7)));
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 7, MAP_TIP_SIZE * 6)));
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 11, MAP_TIP_SIZE * 6)));
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 14, MAP_TIP_SIZE * 6)));
-		Base::Add(new Item(CVector2D(MAP_TIP_SIZE * 25, MAP_TIP_SIZE * 14)));
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 20, MAP_TIP_SIZE * 27)));
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 20, MAP_TIP_SIZE * 24)));
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 20, MAP_TIP_SIZE * 21)));
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 11, MAP_TIP_SIZE * 15)));
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 7, MAP_TIP_SIZE * 15)));
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 4, MAP_TIP_SIZE * 13)));
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 4, MAP_TIP_SIZE * 10)));
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 4, MAP_TIP_SIZE * 7)));
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 7, MAP_TIP_SIZE * 6)));
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 11, MAP_TIP_SIZE * 6)));
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 14, MAP_TIP_SIZE * 6)));
+		Base::Add(new Item(layer,CVector2D(MAP_TIP_SIZE * 25, MAP_TIP_SIZE * 14)));
 
 		//落ちる床
-		Base::Add(new Fallingfloor(CVector2D(MAP_TIP_SIZE * 33, MAP_TIP_SIZE * 14)));
-		Base::Add(new Fallingfloor(CVector2D(MAP_TIP_SIZE * 37, MAP_TIP_SIZE * 14)));
+		Base::Add(new Fallingfloor(layer,CVector2D(MAP_TIP_SIZE * 33, MAP_TIP_SIZE * 14)));
+		Base::Add(new Fallingfloor(layer,CVector2D(MAP_TIP_SIZE * 37, MAP_TIP_SIZE * 14)));
 
 		//ゴール配置
-		Base::Add(new Goal(CVector2D(MAP_TIP_SIZE * 78, MAP_TIP_SIZE * 31)));
+		Base::Add(new Goal(layer,CVector2D(MAP_TIP_SIZE * 78, MAP_TIP_SIZE * 31)));
 
 		break;
 	}
@@ -204,9 +212,12 @@ Map::Map(int stage):Base(eType_Field)
 
 void Map::Draw()
 {
+	int sx = m_scroll[m_layer].x / MAP_TIP_SIZE;
+	int ex = sx + 61;
+	m_img.DrawBegin();
 	//マップチップによる表示の繰り返し
 	for (int i = 0; i < MAP_HEIGHT; i++) {
-		for (int j = 0; j < MAP_WIDTH; j++) {
+		for (int j = sx; j < ex; j++) {
 			//表示しない制御
 			//0を表示しない制御
 			if (m_map_data[i][j] == 0)continue;
@@ -217,11 +228,12 @@ void Map::Draw()
 			//表示サイズ設定
 			m_img.SetSize(MAP_TIP_SIZE, MAP_TIP_SIZE);
 			//表示位置設定
-			m_img.SetPos(MAP_TIP_SIZE * j-m_scroll.x, MAP_TIP_SIZE * i-m_scroll.y);
+			m_img.SetPos(MAP_TIP_SIZE * j-m_scroll[m_layer].x, MAP_TIP_SIZE * i - m_scroll[m_layer].y);
 			//描画
-			m_img.Draw();
+			m_img.DrawS();
 		}
 	}
+	m_img.DrawEnd();
 }
 
 int Map::GetTip(const CVector2D& pos)

@@ -1,10 +1,11 @@
 #include "Base.h"
-std::list<Base*> Base::m_list;
+std::list<Base*> Base::m_list[Base::eLayer_Max];
 //スクロール値の定義
-CVector2D Base::m_scroll(0, 0);
+CVector2D Base::m_scroll[eLayer_Max] = { {0,0},{0,0},{0,0} };
 
 
-Base::Base(int type):m_type(type),m_pos(0,0),m_vec(0,0), m_rad(0),m_kill(false) {
+Base::Base(int type,int layer):
+	m_type(type),m_pos(0,0),m_vec(0,0), m_rad(0),m_kill(false),m_layer(layer) {
 
 }
 bool Base::CollisionRect(Base* b1, Base* b2)
@@ -39,14 +40,14 @@ void Base::DrawRect()
 		m_pos.y + m_rect.m_bottom
 	);
 	Utility::DrawQuad(
-		CVector2D(rect.m_left, rect.m_top) - m_scroll,
+		CVector2D(rect.m_left, rect.m_top) - m_scroll[m_layer],
 		CVector2D(rect.m_width, rect.m_height),
 		CVector4D(1, 0, 0, 0.5f)
 	);
 }
 CVector2D Base::GetScreenPos(const CVector2D& pos) {
 	//座標ースクロール値＝画面上での位置
-	return pos - m_scroll;
+	return pos - m_scroll[m_layer];
 }
 
 bool Base::CollisionCircle(Base* b1, Base* b2)
@@ -58,12 +59,12 @@ bool Base::CollisionCircle(Base* b1, Base* b2)
 	}
 	return false;
 }
-Base* Base::FindObject(int type)
+Base* Base::FindObject(int type,int layer)
 {
 	//先頭の要素
-	auto it = m_list.begin();
+	auto it = m_list[layer].begin();
 	//末尾の要素
-	auto last = m_list.end();
+	auto last = m_list[layer].end();
 	//itが末尾でなければ
 	while (it != last) {
 		if((*it)->m_type==type){
@@ -89,70 +90,98 @@ void Base::Draw() {
 }
 void Base::UpdateAll()
 {
-	//全てのオブジェクトの更新
-for (auto& b : m_list) {
-		b->Update();
+	for (auto& list : m_list) {
+		//全てのオブジェクトの更新
+		for (auto& b : list) {
+			b->Update();
+		}
 	}
 }
 
 void Base::DrawAll()
 {
-	//全てのオブジェクトの描画処理
-	for (auto& b : m_list) {
-		b->Draw();
+	//画面表示位置
+	const CVector2D view_pos[] = {
+		{ 0,1080 / 2},		//上半分
+		{ 0,0 },			//下半分
+		{ 0,0 }				//全画面
+	};
+	//画面表示サイズ
+	CVector2D view_size[] = {
+		{ 1920,1080 / 2},	//上半分
+		{ 1920,1080 / 2},	//下半分
+		{ 1920,1080},		//全画面
+	};
+	int layer = 0;
+	for (auto& list : m_list) {
+		//描画領域設定
+		glViewport(view_pos[layer].x, view_pos[layer].y, view_size[layer].x, view_size[layer].y);
+		CCamera::GetCamera()->Viewport(view_pos[layer].x, view_pos[layer].y, view_size[layer].x, view_size[layer].y);
+		//描画解像度設定
+		CCamera::GetCamera()->SetSize(view_size[layer].x, view_size[layer].y);
+        //全てのオブジェクトの描画処理
+	    for (auto& b : list) {
+			b->Draw();
 	}
-	
+		layer++;
+	}	
 }
 
 void Base::CollisionAll()
 {
-	auto it1 = m_list.begin();
-	auto last = m_list.end();
-	while (it1 != last) {
+	for (auto& list : m_list) {
+		auto it1 = list.begin();
+		auto last = list.end();
+		while (it1 != last) {
 		auto it2 = it1;
 		it2++;
 		while (it2 != last) {
 			(*it1)->Collision(*it2);
 			(*it2)->Collision(*it1);
 			it2++;
+			}
+			it1++;
 		}
-		it1++;
-	}
+	}	
 }
 void Base::CheckKillAll()
 {
-	auto it = m_list.begin();
-	auto last = m_list.end();
-	while (it != last) {
-		if ((*it)->m_kill) {
-			delete(*it);
-			it = m_list.erase(it);
+	for (auto& list : m_list) {
+		auto it = list.begin();
+			auto last = list.end();
+			while (it != last) {
+				if ((*it)->m_kill) {
+					delete(*it);
+					it = list.erase(it);
+				}
+				else {
+					//次へ
+					it++;
+			}
 		}
-		else {
-			//次へ
-			it++;
-		}
-	}
+	}	
 }
 void Base::Add(Base* b)
 {
 	//
-	auto itr = m_list.begin();
-	while (itr != m_list.end()) {
+	auto itr = m_list[b->m_layer].begin();
+	while (itr != m_list[b->m_layer].end()) {
 		if ((*itr)->m_type > b->m_type) {
-			m_list.insert(itr, b);
+			m_list[b->m_layer].insert(itr, b);
 			return;
 		}
 		itr++;
 	}
 	//オブジェクトの末尾に追加
-	m_list.push_back(b);
+	m_list[b->m_layer].push_back(b);
 }
 
 void Base::KillAll()
 {
-	std::list<Base*>ret;
-	for (auto& b : m_list) {
-		b->SetKill();
+	for (auto& list : m_list) {
+		for (auto& b : list) {
+			b->SetKill();
+		}
 	}
 }
+	

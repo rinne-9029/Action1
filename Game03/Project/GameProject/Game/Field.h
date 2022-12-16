@@ -7,7 +7,7 @@ private:
 	CImage m_background;
 public:
 	//コンストラクタ
-	Field();
+	Field(int layer);
 	//描画
 	void Draw();
 };

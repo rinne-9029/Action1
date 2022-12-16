@@ -6,6 +6,6 @@ private:
 	CImage m_img;
 
 public:
-	Goal(const CVector2D& png);
+	Goal(int layer,const CVector2D& png);
 	void Draw();
 };

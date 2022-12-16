@@ -30,8 +30,8 @@ void Fallingfloor::StateOff()
 }
 
 
-Fallingfloor::Fallingfloor(const CVector2D& pos)
-	:Base(eType_Fallingfloor)
+Fallingfloor::Fallingfloor(int layer,const CVector2D& pos)
+	:Base(eType_Fallingfloor,layer)
 {
 	m_img.Load("Image/Fallingfloor/On.png", fallingfloorAnimData, 32, 10);
 	//À•WÝ’è
@@ -57,7 +57,6 @@ void Fallingfloor::Update()
 	}
 	if (m_pos.y >= 1500) {
 		SetKill();
-		Base::Add(new Fallingfloor(CVector2D()));
 	}
 
 

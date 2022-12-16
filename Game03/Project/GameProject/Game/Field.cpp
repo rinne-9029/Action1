@@ -1,6 +1,6 @@
 #include "Field.h"
 
-Field::Field():Base(eType_Field)
+Field::Field(int layer):Base(eType_Field,layer)
 {
 	m_background = COPY_RESOURCE("Background", CImage);
 }

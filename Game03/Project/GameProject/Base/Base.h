@@ -25,6 +25,14 @@ enum {
 
 class Base {
 public:
+	enum {
+		eLayer_Top,
+		eLayer_Bottom,
+		eLayer_Default,
+		eLayer_Max
+	};
+	//オブジェクトのレイヤー
+	int m_layer;
 	//オブジェクトの種類
 	int m_type;
 	//座標データ
@@ -35,17 +43,17 @@ public:
 	//移動ベクトル
 	CVector2D m_vec;
 	//スクロール値
-	static CVector2D m_scroll;
+	static CVector2D m_scroll[eLayer_Max];
 	//削除フラグ
 	bool m_kill;
 	//オブジェクトのリスト
-	static std::list<Base*>m_list;
+	static std::list<Base*>m_list[eLayer_Max];
 	//短形
 	CRect m_rect;
 
 public:
 	//typeオブジェクトの種類
-	Base(int type); //コンストラクタ
+	Base(int type,int layer = eLayer_Default); //コンストラクタ
 	virtual~Base(); //デストラクタ
 	virtual void Update(); //更新処理
 	virtual void Draw(); //描画処理
@@ -57,7 +65,7 @@ public:
 	//短形の表示
 	void DrawRect();
 
-	static CVector2D GetScreenPos(const CVector2D& pos);
+	CVector2D GetScreenPos(const CVector2D& pos);
 	//全てのオブジェクトの更新
 	static void UpdateAll();
 	//全てのオブジェクトの描画
@@ -72,5 +80,5 @@ public:
  static void KillAll();
  //円同士の衝突
  static bool CollisionCircle(Base* b1, Base* b2);
- Base* Base::FindObject(int type);
+ Base* Base::FindObject(int type, int layer = eLayer_Default);
 };

@@ -10,7 +10,7 @@ private:
 	};
 	CImage m_img;
 public:
-	Item(const CVector2D& pos);
+	Item(int layer,const CVector2D& pos);
 	void Update();
 	void Draw();
 	void Collision(Base* b);

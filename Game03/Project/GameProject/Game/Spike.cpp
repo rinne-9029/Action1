@@ -1,7 +1,7 @@
 #include"Spike.h"
 
-Spike::Spike(const CVector2D& pos,int spike_type)
-    :Base(eType_Spike)
+Spike::Spike(int layer,const CVector2D& pos,int spike_type)
+    :Base(eType_Spike,layer)
 {
 	//Spike_Type = spike_type;
 	switch (spike_type) {

@@ -1,7 +1,7 @@
 #include "UI.h"
 #include"GameData.h"
 
-UI::UI() :Base(eType_UI) 
+UI::UI(int layer) :Base(eType_UI,layer) 
 {
 	m_img.Load("Image/UI/Text.png");
 }
@@ -27,7 +27,7 @@ void UI::Draw()
 	}
 }
 
-UI2::UI2() :Base(eType_UI2)
+UI2::UI2(int layer) :Base(eType_UI2,layer)
 {
 	m_img.Load("Image/UI/LIFE.png");
 }

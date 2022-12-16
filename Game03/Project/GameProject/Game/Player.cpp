@@ -10,8 +10,8 @@
 
 
 
-Player::Player(const CVector2D& p, bool flip):
-	Base(eType_Player) {
+Player::Player(int id, int layer,const CVector2D& p, bool flip):
+	Base(eType_Player,layer) {
 		//画像複製
 		m_img = COPY_RESOURCE("Player", CImage);
 		//再生アニメーション設定
@@ -36,6 +36,8 @@ Player::Player(const CVector2D& p, bool flip):
         jumpcount = 0;
 		//無敵時間
 		invincibility = 0;
+		//プレイヤーの振り分け
+		m_player_id = id;
 		
 
 }
@@ -56,7 +58,7 @@ void Player::StateIdle()
 
 
 	//左移動
-	if (HOLD(CInput::eButton2) && m_pos.x >= 15) {
+	if (HOLD_PAD(m_player_id,CInput::eLeft) && m_pos.x >= 15) {
 		//移動量を設定
 		m_pos.x += -move_speed;
 		//反転フラグ
@@ -65,7 +67,7 @@ void Player::StateIdle()
 	}
 
 	//右移動
-	if (HOLD(CInput::eButton4) && m_pos.x <= 2540) {
+	if (HOLD_PAD(m_player_id,CInput::eRight) && m_pos.x <= 2540) {
 		//移動量を設定
 		m_pos.x += move_speed;
 		//反転フラグ
@@ -75,14 +77,14 @@ void Player::StateIdle()
 
 	//２段ジャンプ
 	//ジャンプの前に入れることによって１回目から２段ジャンプになるのを防ぐ
-     if (!m_is_ground && PUSH(CInput::eButton5) && jumpcount == 0) {
+     if (!m_is_ground && PUSH_PAD(m_player_id,CInput::eButton1) && jumpcount == 0) {
 			m_state = eState_DoubleJump;
 		}
 
 
 
 	//ジャンプ
-	if (m_is_ground && PUSH(CInput::eButton5)) {
+	if (m_is_ground && PUSH_PAD(m_player_id,CInput::eButton1)) {
 		m_vec.y = -jump_pow;
 		m_is_ground = false;
 	}
@@ -146,7 +148,7 @@ void Player::StateDamage()
 void Player::StateDown()
 {
 	    GameData::s_kosu -= 1;
-		Base::Add(new Effect("Effect_Desappearing", m_pos + CVector2D(0, -40), m_flip));
+		Base::Add(new Effect(m_layer,"Effect_Desappearing", m_pos + CVector2D(0, -40), m_flip));
 		SetKill();
 }
 
@@ -184,8 +186,9 @@ void Player::Update()
 	m_img.UpdateAnimation();
 	//スクロール設定
 	if( m_pos.x >= 1280/3 && m_pos.x <= 2560-1496){
-	m_scroll.x = m_pos.x - 1280/3  ;
+		m_scroll[m_layer].x = m_pos.x - 1280 / 3;
 	}
+    m_scroll[m_layer].y = 600;
 }
 
 

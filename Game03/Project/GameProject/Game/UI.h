@@ -6,7 +6,7 @@ public:
 	CImage m_img;
 	int cnt;
 public:
-	UI();
+	UI(int layer);
 	void Update();
 	void Draw();
 };
@@ -16,7 +16,7 @@ public:
 	CImage m_img;
 	int kosu;
 public:
-	UI2();
+	UI2(int layer);
 	void Update();
 	void Draw();
 };

@@ -36,9 +36,9 @@ void Init(void)
 	CFPS::Init();
 	//ボタンの設定
 	CInput::Init();
-	CInput::SetButton(0, CInput::eButton1, 'W');
-	CInput::SetButton(0, CInput::eButton2, 'A');
-	CInput::SetButton(0, CInput::eButton3, 'S');
+	CInput::SetButton(0, CInput::eButton1, VK_SPACE);	//ジャンプ
+	CInput::SetButton(0, CInput::eButton2, 'W');		//決定1
+	CInput::SetButton(0, CInput::eButton3, 'S');		//決定2
 	CInput::SetButton(0, CInput::eButton4, 'D');
 	CInput::SetButton(0, CInput::eButton5, VK_SPACE);
 	CInput::SetButton(0, CInput::eButton10, VK_RETURN);
@@ -79,7 +79,7 @@ void Init(void)
 	//スタート位置画像
 	ADD_RESOURCE("Start", CImage::CreateImage("Image/Start.png"));
 	//看板画像
-	ADD_RESOURCE("Signboard", CImage::CreateImage("Image/Signboard1.png"));
+	//ADD_RESOURCE("Signboard", CImage::CreateImage("Image/Signboard1.png"));
 	//プレイヤー画像
 	ADD_RESOURCE("Player", CImage::CreateImage("Image/Player1.png", player_anim_data, 32, 32));
 	//敵画像
